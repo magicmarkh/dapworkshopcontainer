@@ -1,9 +1,8 @@
-FROM centos:latest
+FROM magicmarkh/dap-workshop-k8s:v1
 
-RUN mkdir /scripts
+COPY mysql-performers.sh /scripts/
 
-COPY dap-k8s-secret.sh local-k8s-secret.sh /scripts/
+RUN yum install mysql -y
 
-RUN yum install jq -y
+RUN chmod +x /scripts/mysql-performers.sh
 
-RUN chmod +x /scripts/dap-k8s-secret.sh && chmod +x /scripts/local-k8s-secret.sh
