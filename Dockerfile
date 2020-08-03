@@ -1,8 +1,3 @@
-FROM magicmarkh/dap-workshop-k8s:v1
+FROM magicmarkh/dap-workshop-k8s:v2
 
-COPY mysql-performers.sh /scripts/
-
-RUN yum install mysql -y
-
-RUN chmod +x /scripts/mysql-performers.sh
-
+RUN yum install openssh-server openssh-clients -y
