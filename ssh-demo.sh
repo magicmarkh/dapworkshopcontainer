@@ -1,1 +1,1 @@
-ssh -p 2222 localhost 'date >> /tmp/demofile'
+ssh -o StrictHostKeyChecking=no -p 2222 localhost 'date >> /tmp/demofile'
