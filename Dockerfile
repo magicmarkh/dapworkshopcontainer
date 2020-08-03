@@ -1,3 +1,9 @@
-FROM magicmarkh/dap-workshop-k8s:v2
+FROM centos:latest
 
-RUN yum install openssh-server openssh-clients -y
+RUN mkdir /scripts
+
+COPY *.sh /scripts/
+
+RUN yum install jq mysql openssh-server openssh-clients -y 
+
+RUN chmod +x /scripts/*
