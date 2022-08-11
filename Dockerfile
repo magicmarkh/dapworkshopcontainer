@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:centos7.9.2009
 
 RUN mkdir /scripts
 
